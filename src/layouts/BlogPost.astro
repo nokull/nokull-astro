@@ -18,14 +18,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			main {
 				width: calc(100% - 2em);
 				max-width: 100%;
-				margin: 0;
 			}
 			.hero-image {
 				width: 100%;
+				margin-bottom: 2rem; /* 본문과의 간격 */
+				
 			}
+
 			.hero-image img {
+				margin: auto;
 				display: block;
-				margin: 0 auto;
+				width: 90%;      /* 부모 너비(800px 박스)를 꽉 채움 */
+				height: auto;     /* 가로에 맞춰서 세로 비율을 원본 그대로 유지 */
+				
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
 			}
@@ -39,7 +44,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.title {
 				margin-bottom: 1em;
 				padding: 1em 0;
-				text-align: center;
 				line-height: 1;
 			}
 			.title h1 {
@@ -51,6 +55,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.last-updated-on {
 				font-style: italic;
+			}
+
+			hr {
+				border: 0;
+				border-top: 2px solid rgb(180, 180, 180);
+				margin: 2rem 0;
+				width: 50%;
+				margin: 0;
 			}
 		</style>
 	</head>

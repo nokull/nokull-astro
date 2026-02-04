@@ -7,11 +7,11 @@ const { date } = Astro.props;
 ---
 
 <time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
+    {
+        date.toLocaleDateString('ko-kr', {
+            year: 'numeric',
+            month: 'long', // '1월'처럼 표시하고 싶으면 'long', '1'처럼 숫자만 원하면 'numeric'
+            day: 'numeric',
+        })
+    }
 </time>
